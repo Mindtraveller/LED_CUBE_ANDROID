@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <title>JSDroid</title>
+
+    <!-- JSDroid references -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 class="bg-success text-center">LED-CUBE Control</h2>
+    <h2 id="error-label" class="bg-danger text-center hidden"></h2>
+    <ul id="devices"></ul>
+
+<div id="joystick" class="hidden">
+    <div class="col-xs-12">
+        <button id="top_button" type="button" class="btn btn-primary btn-lg col-xs-4 col-xs-offset-4">Up</button>
+    </div>
+    <button id="left_button" type="button" class="btn btn-primary btn-lg col-xs-4 col-xs-offset-1">Left</button>
+    <button id="right_button" type="button" class="btn btn-primary btn-lg col-xs-4 col-xs-offset-2">Right</button>
+    <div class="col-xs-12" style="margin-bottom: 100px;">
+        <button id="bottom_button" type="button" class="btn btn-primary btn-lg col-xs-offset-4 col-xs-4">Down</button>
+    </div>
+</div>
+    <div id="mode_buttons" class="hidden">
+        <button id="mode_0_button" type="button" class="btn btn-success btn-lg col-xs-10 col-xs-offset-1">Mode 0</button>
+        <button id="mode_1_button" type="button" class="btn btn-success btn-lg col-xs-10 col-xs-offset-1">Mode 1</button>
+        <button id="mode_snake_button" type="button" class="btn btn-success btn-lg col-xs-10 col-xs-offset-1">Snake Mode</button>
+        <button id="mode_2_button" type="button" class="btn btn-success btn-lg col-xs-10 col-xs-offset-1">Mode 2</button>
+        <button id="mode_3_button" type="button" class="btn btn-success btn-lg col-xs-10 col-xs-offset-1">Mode 3</button>
+        <button id="mode_auto_button" type="button" class="btn btn-success btn-lg col-xs-10 col-xs-offset-1">Auto</button>
+    </div>
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="../plugins/cordova-plugin-bluetooth-serial/www/bluetoothSerial.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
